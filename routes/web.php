@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('transact');
 });
+
+Route::post('transact', 'TransactionController@initiateTransaction');
+Route::get('transact', 'TransactionController@displayPage');
